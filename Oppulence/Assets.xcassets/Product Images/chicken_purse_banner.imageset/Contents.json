@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "chicken_purse_banner.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
