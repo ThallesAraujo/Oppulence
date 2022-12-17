@@ -11,10 +11,10 @@ import UIKit
 struct ProductDetailsView: View {
     
     @Binding var product: Product
+    @State var pushProductDetails: Bool = false
     
     var body: some View {
             VStack{
-                
                 ScrollView{
                     VStack(alignment: .leading, spacing: 12){
                         Image("chicken_purse_small").resizable().aspectRatio(contentMode: .fit)
@@ -29,21 +29,18 @@ struct ProductDetailsView: View {
                     }.padding()
                 }
                 
-                Button(action: {}) {
+                NavigationLink(destination: PaymentMethodsView(), label: {
                     HStack{
                         Text("Formas de Pagamento").font(.custom(DMSerifDisplayRegular, size: 18))
                         Spacer()
                         Image(systemName: "chevron.right").font(.system(size: 24, weight: .regular))
                     }.padding()
-                    
-                }.padding().buttonStyle(.borderedProminent).buttonBorderShape(.roundedRectangle(radius: 8)).tint(.black)
+                }).padding().buttonStyle(.borderedProminent).buttonBorderShape(.roundedRectangle(radius: 8)).tint(.black)
                 
+               
                 
-                
-            }.toolbar{
-                ToolbarItem(placement: .principal, content: {
-                    Text(product.name).font(.custom(DMSerifDisplayRegular, size: 24)).foregroundColor(.black)
-                })
+            }.preferredColorScheme(.light).toolbar{
+                OppulenceToolbar(title: product.name)
             }
     }
 }

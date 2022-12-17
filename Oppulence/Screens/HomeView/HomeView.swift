@@ -28,7 +28,7 @@ struct HomeView: View {
                     
                     
                     NavigationLink {
-                        ProductDetailsView(product: .constant(Product.init(name: "Chicken Purse", price: 300000000, description: "Última moda em Paris, a bolsa de galinha de alta costura é um must-have para looks de gala, perfeita para viagens internacionais e eventos corporativos.", brand: "Mike Oxlong Design Co.", supportedPaymentMethods: [.init(desc: "", observations: "")], imageUrl: "")))
+                        ProductDetailsView(product: .constant(Product.init(name: "Chicken Purse", price: 300000, description: "Última moda em Paris, a bolsa de galinha de alta costura é um must-have para looks de gala, perfeita para viagens internacionais e eventos corporativos.", brand: "Mike Oxlong Design Co.", supportedPaymentMethods: [.init(desc: "", observations: "")], imageUrl: "")))
                     } label: {
                         ZStack{
                             Image(systemName: "chevron.right").font(.system(size: 34, weight: .bold)).foregroundColor(.white).padding()
